@@ -10,10 +10,6 @@ unknown();
 
 \count();
 
-\ count();
-
-\ count ();
-
 $x=count();
 
 $x = count();

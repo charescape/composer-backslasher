@@ -1,6 +1,6 @@
 <?php
 
-namespace Abc;
+namespace A;
 
 count();
 
