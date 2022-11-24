@@ -23,16 +23,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} self-update -vvv
+      - run: sudo echo 'export PATH="$PATH:/usr/local/php/bin:/usr/local/php/sbin"' >> ~/.bashrc
+
+      - run: sudo source ~/.bashrc
+
+      - run: php -v
+
+      - run: composer self-update -vvv
 
       - name: Install dependencies
         run: |
           rm -rf vendor/
           rm -f composer.lock
-          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --no-interaction
+          composer install --no-interaction
 
       - name: Tester
-        run: ${{ env.PHP_CMD }} vendor/bin/tester tests -s
+        run: vendor/bin/tester tests -s
 
       - name: Actual
         run: for i in $(find tests -name \*.actual); do echo "--- $i"; cat $i; echo; echo; done
