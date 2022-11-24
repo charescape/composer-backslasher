@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: sudo export PATH="$PATH:/usr/local/php/bin:/usr/local/php/sbin"
+      - run: export PATH="$PATH:/usr/local/php/bin:/usr/local/php/sbin"
 
       - run: php -v
 
