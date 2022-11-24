@@ -35,7 +35,7 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
           tools: pecl
-          extensions: curl, dom, imagick, intl, mbstring, mcrypt, memcached, mysql, pdo, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, sqlite
+          extensions: curl, dom, imagick, intl, mbstring, tokenizer, memcached, mysql, pdo, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, sqlite
           ini-values: date.timezone='UTC', session.save_path="${{ runner.temp }}"
 
       - name: Install dependencies
