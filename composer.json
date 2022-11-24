@@ -5,9 +5,7 @@
   "keywords": [
     "composer"
   ],
-  "license": [
-    "BSD-3-Clause"
-  ],
+  "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "David Grudl",
