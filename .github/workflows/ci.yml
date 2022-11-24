@@ -24,7 +24,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: sudo ln -s /usr/local/php/bin/php /usr/local/bin/php
-      - run: sudo ln -s /usr/local/php/bin/php /bin/php
 
       - run: php -v
 
