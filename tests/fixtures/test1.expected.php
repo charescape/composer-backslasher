@@ -1,6 +1,6 @@
 <?php
 
-namespace A;
+namespace Abc;
 
 \count();
 
@@ -9,10 +9,6 @@ namespace A;
 unknown();
 
 \count();
-
-\ count();
-
-\ count ();
 
 $x=\count();
 
