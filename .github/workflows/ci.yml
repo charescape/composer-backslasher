@@ -23,9 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: sudo echo 'export PATH="$PATH:/usr/local/php/bin:/usr/local/php/sbin"' >> ~/.bashrc
-
-      - run: sudo source ~/.bashrc
+      - run: sudo export PATH="$PATH:/usr/local/php/bin:/usr/local/php/sbin"
 
       - run: php -v
 
