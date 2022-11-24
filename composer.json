@@ -13,7 +13,7 @@
 	"require": {
 		"php": ">=7.1",
 		"composer-plugin-api": "^1.0 || ^2.0",
-		"nikic/php-parser": "v5.0.0alpha1"
+		"nikic/php-parser": "v4.15.2"
 	},
 	"require-dev": {
 		"nette/tester": "^2.2"
