@@ -1,30 +1,41 @@
 {
-	"name": "dg/composer-backslasher",
-	"type": "composer-plugin",
-	"description": "Composer plugin that speeds up your application by adding backslashes to all PHP internal functions and constants.",
-	"keywords": ["composer"],
-	"license": ["BSD-3-Clause"],
-	"authors": [
-		{
-			"name": "David Grudl",
-			"homepage": "https://davidgrudl.com"
-		}
-	],
-	"require": {
-		"php": ">=7.1",
-		"composer-plugin-api": "^1.0 || ^2.0",
-		"nikic/php-parser": "v4.15.2"
-	},
-	"require-dev": {
-		"nette/tester": "^2.2"
-	},
-	"autoload": {
-		"classmap": ["src/"]
-	},
-	"scripts": {
-		"tester": "tester tests -s"
-	},
-	"extra": {
-		"class": "DG\\ComposerBackslasher\\Plugin"
-	}
+  "name": "dg/composer-backslasher",
+  "type": "composer-plugin",
+  "description": "Composer plugin that speeds up your application by adding backslashes to all PHP internal functions and constants.",
+  "keywords": [
+    "composer"
+  ],
+  "license": [
+    "BSD-3-Clause"
+  ],
+  "authors": [
+    {
+      "name": "David Grudl",
+      "homepage": "https://davidgrudl.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "composer-plugin-api": "^2.0",
+    "nikic/php-parser": "^4.15"
+  },
+  "require-dev": {
+    "nette/tester": "^2.4"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "scripts": {
+    "tester": "tester tests -s",
+    "redo-install": [
+      "@composer self-update -vvv",
+      "rm -f composer.lock",
+      "@composer install -vvv"
+    ]
+  },
+  "extra": {
+    "class": "DG\\ComposerBackslasher\\Plugin"
+  }
 }
