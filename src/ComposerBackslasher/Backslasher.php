@@ -62,12 +62,16 @@ class Backslasher
 	 */
 	public function processCode($code, $file = null)
 	{
-		try {
-			$nodes = $this->parser->parse($code);
-		} catch (PhpParser\Error $e) {
-			$this->io->write("$file : {$e->getMessage()}", true, IOInterface::VERBOSE);
-			return $code;
-		}
+        if (defined('IS_TESTING') && (IS_TESTING === true)) {
+            $nodes = $this->parser->parse($code);
+        } else {
+            try {
+                $nodes = $this->parser->parse($code);
+            } catch (PhpParser\Error $e) {
+                $this->io->write("$file : {$e->getMessage()}", true, IOInterface::VERBOSE);
+                return $code;
+            }
+        }
 
 		$collector = new Collector;
 		$collector->ignored = $this->ignored;

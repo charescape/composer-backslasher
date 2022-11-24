@@ -36,13 +36,5 @@ jobs:
           rm -f composer.lock
           composer install --no-interaction
 
-      - run: composer create-project nette/code-checker temp/code-checker ^3 --no-progress
-      - run: php temp/code-checker/code-checker -i tests/fixtures
-      - run: composer create-project nette/coding-standard temp/coding-standard ^3 --no-progress
-      - run: php temp/coding-standard/ecs check
-
       - name: Tester
         run: vendor/bin/tester tests -s
-
-      - name: Actual
-        run: for i in $(find tests -name \*.actual); do echo "--- $i"; cat $i; echo; echo; done

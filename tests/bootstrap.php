@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 error_reporting(E_ALL);
 
-if (!(include __DIR__ . '/../vendor/autoload.php')) {
-	echo 'Install Nette Tester using `composer install`';
-	exit(1);
-}
+define('IS_TESTING', true);
+
+include __DIR__ . '/../vendor/autoload.php';
 
 Tester\Environment::setup();
 
