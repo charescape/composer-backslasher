@@ -14,8 +14,10 @@
       "homepage": "https://davidgrudl.com"
     }
   ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.0.5",
     "composer-plugin-api": "^2.0",
     "nikic/php-parser": "^4.15"
   },
@@ -36,6 +38,9 @@
     ]
   },
   "extra": {
-    "class": "DG\\ComposerBackslasher\\Plugin"
+    "class": "DG\\ComposerBackslasher\\Plugin",
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    }
   }
 }
