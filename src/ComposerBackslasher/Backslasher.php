@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2015 David Grudl (https://davidgrudl.com)
  */
 
-namespace DG\ComposerBackslasher;
+namespace Charescape\ComposerBackslasher;
 
 use Composer\IO\IOInterface;
 use PhpParser;

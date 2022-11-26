@@ -6,7 +6,7 @@ require __DIR__ . '/bootstrap.php';
 use Tester\Assert;
 
 $io = new IOInterface;
-$backslasher = new DG\ComposerBackslasher\Backslasher($io);
+$backslasher = new Charescape\ComposerBackslasher\Backslasher($io);
 
 for ($i = 1; $i <= 4; $i++) {
 	Assert::matchFile(

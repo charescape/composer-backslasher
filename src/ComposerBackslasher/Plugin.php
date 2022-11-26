@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DG\ComposerBackslasher;
+namespace Charescape\ComposerBackslasher;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;

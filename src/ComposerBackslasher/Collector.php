@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DG\ComposerBackslasher;
+namespace Charescape\ComposerBackslasher;
 
 use PhpParser\Node;
 use PhpParser\Node\Expr;
