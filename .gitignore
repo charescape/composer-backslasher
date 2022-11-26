@@ -5,3 +5,4 @@
 /tests/output
 
 /composer.lock
+/.php-cs-fixer.cache
