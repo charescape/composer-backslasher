@@ -22,7 +22,7 @@
   },
   "require-dev": {
     "composer/composer": "^2.0",
-    "nette/tester": "^2.4"
+    "nette/tester": "^2.5"
   },
   "autoload": {
     "classmap": [
